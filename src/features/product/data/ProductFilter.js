@@ -1,4 +1,4 @@
-export const textfeildSearch =
+export const textFeildSearch =
 {
     rootClass: "flex items-center justify-between mb-6",
     inputClass:
@@ -16,22 +16,22 @@ export const selectOptionsSort = {
     selectClass:
         "bg-transparent  focus:ring-blue-500 focus:border-blue-500 block text-slate-400 rounded-lg p-2.5 w-full",
 
-    rootClass: "basis-2/5",
+    rootClass: "basis-7/12   lg:basis-2/5 ",
     options: [
         {
-            id:0,
+            id: 0,
             optionClass: "bg-slate-500 text-slate-300 ",
             value: "",
             label: "Select a category",
         },
         {
-            id:1,
+            id: 1,
             optionClass: "bg-slate-500 text-slate-300 selected",
             value: "latest",
             label: "latest",
         },
         {
-            id:2,
+            id: 2,
             optionClass: "bg-slate-500 text-slate-300",
             value: "earliest",
             label: "earliest",

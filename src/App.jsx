@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import "./App.css";
 import ProductHeader from "./features/product/component/ProductHeader";
@@ -13,47 +13,27 @@ import ProductFilter from "./features/product/component/ProductFilter";
 import ProductLists from "./features/product/component/ProductLists";
 import AddNewCategory from "./features/Category/components/AddNewCategory";
 
+import { Toaster } from "react-hot-toast";
+
 function App() {
-  const handleSort = (a, b) => {
-    switch (sort) {
-      case "latest": // latest
-        return new Date(b.id).getTime() - new Date(a.id).getTime();
-      case "earliest": // earliest
-        return new Date(a.id).getTime() - new Date(b.id).getTime();
-    }
-  };
-
-  const products = useContext(ProductContext).products;
-  const [sort, setSort] = useState("latest");
-  const [category, setCategory] = useState("All");
-
-  let filteredAndSortProducts = products;
- 
-    filteredAndSortProducts =(category === "All"?filteredAndSortProducts:products
-      .filter((p) => p.category === category)) 
-      .sort(handleSort);
-
   return (
-    <>
+    <div className="flex flex-col items-center ">
+      <Toaster />
+
       <ProductHeader />
-      <div className=" w-full">
-        <div className="container mx-auto p-4 flex flex-col md:flex-row md:justify-between md:gap-x-12 lg:max-w-screen-xl">
+      <div className="w-full container mx-auto p-4 max-w-screen-xl">
+        <div className=" flex flex-col md:flex-row md:justify-between md:gap-x-12 ">
           <div className="w-full basis-2/4">
             <AddNewCategory />
             <AddNewProduct />
           </div>
 
           <div className="w-full basis-2/4">
-            <ProductFilter
-              selected={category}
-              onChangeCategory={setCategory}
-              onChangeSort={setSort}
-            />
-            <ProductLists filteredAndSortProducts={filteredAndSortProducts} />
+            <ProductFilter />
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

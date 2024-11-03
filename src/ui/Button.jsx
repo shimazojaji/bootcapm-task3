@@ -1,6 +1,6 @@
 import React from "react";
 
-function Button({ options, onClickState, disable = false }) {
+function Button({ options, onClickState,type, disable = false }) {
   return (
     <>
       <button
@@ -8,7 +8,7 @@ function Button({ options, onClickState, disable = false }) {
         className={ options.classList}
         onClick={onClickState}
         disabled={disable}
-        type={options.type}      >
+        type={type}      >
         {options.label}
       </button>
     </>
