@@ -9,7 +9,7 @@ function ProductHeader() {
         Inventory App using tailwind & React.js
       </h1>
       <span className="flex items-center text-sm justify-center h-7 w-7 rounded-full bg-slate-500 border-2 border-slate-300 font-bold text-slate-300">
-       {products.length}
+        {products.length}
       </span>
     </div>
   );

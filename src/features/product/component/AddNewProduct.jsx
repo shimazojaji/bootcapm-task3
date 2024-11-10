@@ -1,9 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 
 import {
   selectOptions,
   labelOptions,
-  btnOptions,
+  btnOptionAdd,
+  btnOptionCancel,
   textfeildTitle,
   textfeildQty,
 } from "../data/ProductData";
@@ -83,7 +84,7 @@ function AddNewProduct() {
       toast.error("Failed to add product.");
     }
   };
-
+  const reseting = () => reset();
   return (
     <form
       className="mb-10 flex flex-col w-11/12 md:w-full"
@@ -118,7 +119,14 @@ function AddNewProduct() {
             error={errors.selectedCategory?.message}
           />
         </div>
-        <Button options={btnOptions} type={"submit"} />
+        <div className="flex items-center justify-between gap-x-4 w-full">
+          <Button
+            options={btnOptionCancel}
+            onClickState={reseting}
+            type={"button"}
+          />
+          <Button options={btnOptionAdd} type={"submit"} />
+        </div>
       </div>
     </form>
   );

@@ -79,6 +79,8 @@ function AddForm({ cancelHandle }) {
       toast.error("Failed to add category.");
     }
   };
+  const canceling = () => reset();
+
   return (
     <form
       className="bg-slate-700 p-4 rounded-xl flex flex-col gap-y-4 mb-8"
@@ -96,8 +98,12 @@ function AddForm({ cancelHandle }) {
       />
 
       <div className="flex items-center justify-between gap-x-4">
-        <Button options={btnOptionCancel} onClickState={cancelHandle} type={"button"}/>
-        <Button options={{ ...btnOptionAdd }}  type={"submit"}/>
+        <Button
+          options={btnOptionCancel}
+          onClickState={canceling}
+          type={"button"}
+        />
+        <Button options={{ ...btnOptionAdd }} type={"submit"} />
         {/* Ensure Add button submits the form */}
       </div>
     </form>
@@ -107,11 +113,11 @@ function AddForm({ cancelHandle }) {
 function InputField({ label, register, error }) {
   return (
     <div className="flex flex-col items-start">
-      <div className="flex gap-1" >
-           <label className="mb-1 text-slate-400">{label}</label> 
-           {error && <span className="text-red-500">*</span>}
+      <div className="flex gap-1">
+        <label className="mb-1 text-slate-400">{label}</label>
+        {error && <span className="text-red-500">*</span>}
       </div>
-  
+
       <input
         {...register}
         className="bg-transparent border border-solid border-slate-400 focus:ring-blue-500 focus:border-blue-500 rounded-xl text-slate-400 p-2 w-full"

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useMemo, useState } from "react";
+import React, { useContext, useMemo } from "react";
 import TextField from "../../../ui/TextField";
 import Label from "../../../ui/Label";
 import SelectOption from "../../../ui/SelectOption";
@@ -87,7 +87,7 @@ function ProductFilter() {
           <Label labelOptions={labelOptionsSort} />
           <SelectOption
             selectOptions={selectOptionsSort}
-            options={selectOptionsSort.options}
+  g          options={selectOptionsSort.options}
             register={register("sortD")}
           />
         </div>

@@ -21,13 +21,20 @@ export const textfeildQty = {
     label: "Quantity",
 };
 
-export const btnOptions = {
-    id: "add-new-product",
-    classList: "flex-1 bg-slate-500 text-slate-200 rounded-xl py-2 w-full",
+
+export const btnOptionAdd = {
+    id: "Add New Product",
+    classList: "text-xs sm:text-base flex-1 bg-slate-500 text-slate-200 rounded-xl py-2",
     label: "Add New Product",
-    type: "submit"
+
 };
 
+export const btnOptionCancel = {
+    id: "reset-add-product",
+    classList: "text-xs sm:text-base flex-1 border border-solid border-slate-400 text-slate-400 rounded-xl py-2",
+    label: "Reset",
+
+};
 export const selectOptions = {
     name: "categoryId",
     id: "product-category",

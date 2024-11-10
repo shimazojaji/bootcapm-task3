@@ -6,7 +6,6 @@ function ProductLists({ products }) {
   const onDelete = useCallback(
     (id) => {
       if (id) {
-        console.log(id);
         deleteProduct(products.filter((p) => p.id !== id));
       }
     },
