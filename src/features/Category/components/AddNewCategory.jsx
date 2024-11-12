@@ -5,16 +5,20 @@ import { CategoryContext } from "../context/CategoryContext";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-
 import { toast } from "react-hot-toast";
 const schema = yup
   .object({
-    category: yup.string().trim().required("Category is required"),
+    category: yup
+      .string()
+      .trim()
+      .required("Category is required")
+      .matches(/^[A-Za-z]*$/, "Only English characters(A-Za-z) are allowed"),
     categoryDescription: yup
       .string()
       .trim()
       .min(0)
-      .max(500, "Description can't exceed 500 characters"),
+      .max(500, "Description can't exceed 500 characters")
+      .matches(/^[A-Za-z]*$/, "Only English characters(A-Za-z) are allowed"),
   })
   .required();
 
@@ -27,7 +31,7 @@ function AddNewCategory() {
   return (
     <div className="w-11/12  md:w-full flex flex-col ">
       <ButtonToggle onClick={toggleFormVisibility} isDisabled={isFormVisible} />
-      {isFormVisible && <AddForm cancelHandle={toggleFormVisibility} />}
+      {isFormVisible && <AddForm />}
     </div>
   );
 }
@@ -52,7 +56,7 @@ const ButtonToggle = ({ onClick, isDisabled }) => {
   );
 };
 
-function AddForm({ cancelHandle }) {
+function AddForm() {
   const { addCategory } = useContext(CategoryContext);
   const {
     register,

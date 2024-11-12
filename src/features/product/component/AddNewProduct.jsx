@@ -20,7 +20,12 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 const schema = yup
   .object({
-    title: yup.string().trim().required("Title is required"),
+    title: yup
+      .string()
+      .trim()
+      .required("Title is required")
+      .matches(/^[A-Za-z]*$/, "Only English characters(A-Za-z) are allowed"),
+
     quantity: yup
       .number()
       .typeError("Quantity must be a number")

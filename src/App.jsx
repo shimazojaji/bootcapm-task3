@@ -1,16 +1,7 @@
-import { useContext, useEffect, useState } from "react";
-
 import "./App.css";
 import ProductHeader from "./features/product/component/ProductHeader";
-
-import { CategoryProvider } from "./features/Category/context/CategoryContext";
-import {
-  ProductContext,
-  ProductProvider,
-} from "./features/product/context/ProductContext";
 import AddNewProduct from "./features/product/component/AddNewProduct";
 import ProductFilter from "./features/product/component/ProductFilter";
-import ProductLists from "./features/product/component/ProductLists";
 import AddNewCategory from "./features/Category/components/AddNewCategory";
 
 import { Toaster } from "react-hot-toast";

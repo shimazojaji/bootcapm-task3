@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useEffect, useState } from "react";
+import React, { useCallback, useContext } from "react";
 import { ProductContext } from "../context/ProductContext";
 
 function ProductLists({ products }) {
@@ -29,7 +29,7 @@ function ProductLists({ products }) {
               <span className="text-slate-400">{product.title}</span>
               <div className="flex items-center gap-x-3">
                 <span className="text-slate-400">
-                  {new Date(product.id).toLocaleString("fa", {
+                  {new Date(product.id).toLocaleString("us", {
                     dateStyle: "short",
                   })}
                 </span>

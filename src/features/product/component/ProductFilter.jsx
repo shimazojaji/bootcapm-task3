@@ -87,7 +87,7 @@ function ProductFilter() {
           <Label labelOptions={labelOptionsSort} />
           <SelectOption
             selectOptions={selectOptionsSort}
-  g          options={selectOptionsSort.options}
+            options={selectOptionsSort.options}
             register={register("sortD")}
           />
         </div>
