@@ -35,7 +35,7 @@ const schema = yup
 
     selectedCategory: yup
       .string()
-      .required("You must select an option")
+      // .required("You must select an option")
       .notOneOf(["default"], "Please select an option "),
   })
   .required();

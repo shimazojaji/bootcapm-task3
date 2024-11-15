@@ -46,7 +46,7 @@ function ProductFilter() {
     resolver: yupResolver(schema),
     defaultValues: {
       search: "",
-      sortD: "latest",
+      sortD: "default",
       sortC: "all",
     },
     mode: "all",

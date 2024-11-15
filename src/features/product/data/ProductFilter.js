@@ -21,7 +21,7 @@ export const selectOptionsSort = {
         {
             id: 0,
             optionClass: "bg-slate-500 text-slate-300 ",
-            value: "",
+            value: "default",
             label: "Select a category",
         },
         {
