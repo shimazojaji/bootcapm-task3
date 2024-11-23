@@ -40,5 +40,9 @@ The JavaScript features and methods used in this mini app include:
 
 
 ## How to use
-- npm install 
+- npm install
+
+  
+## Details
+
 
