@@ -51,9 +51,9 @@ The JavaScript features and methods used in this mini app include:
 ## Details
 The project includes a main folder named src, which contains components, hooks, and all the core files of the project.
 The structure of the src folder is as follows:
-- The features folder includes subfolders category and product, where all items related to these features, such as components, context, and data, are organized within these subfolders.
-- The hooks folder is dedicated to all hooks that are shared between product and category.
-- The ui folder contains  components for any UI, including: Button, Description, Label, SelectOption, and TextField.
+- The *features* folder includes subfolders category and product, where all items related to these features, such as components, context, and data, are organized within these subfolders.
+- The *hooks* folder is dedicated to all hooks that are shared between product and category.
+- The *ui* folder contains  components for any UI, including: Button, Description, Label, SelectOption, and TextField.
 
 The components of the project embedded in the main App component are as follows:
 - ProductHeader
@@ -61,10 +61,10 @@ The components of the project embedded in the main App component are as follows:
 - AddNewProduct
 - ProductFilter
 
-The ProductHeader: This component is developed to display the title and the number of products available in the product list. Since this component requires access to product information stored in the local storage, it utilizes the `ProductContext`.
+The  *ProductHeader*: This component is developed to display the title and the number of products available in the product list. Since this component requires access to product information stored in the local storage, it utilizes the `ProductContext`.
 
-The  AddNewCategory: The responsibility of this component is to add a category to the local storage. Each category includes a title and a description that the user must complete. Field validation is handled using `react-hook-form` and `yup`, and the `CategoryContext` is used to save the category in local storage.
+The  _AddNewCategory_: The responsibility of this component is to add a category to the local storage. Each category includes a title and a description that the user must complete. Field validation is handled using `react-hook-form` and `yup`, and the `CategoryContext` is used to save the category in local storage.
 
-The  AddNewProduct: The responsibility of this component is to add products to the local storage. For this purpose, the user provides the product title and quantity through text fields and then selects a category for the product, which must have been previously saved in local storage by the `AddNewCategory` component. Form validation is handled using `react-hook-form` and `yup`. The component uses `ProductContext` to store product information and `CategoryContext` to read category information from local storage.
+The  _AddNewProduct_: The responsibility of this component is to add products to the local storage. For this purpose, the user provides the product title and quantity through text fields and then selects a category for the product, which must have been previously saved in local storage by the `AddNewCategory` component. Form validation is handled using `react-hook-form` and `yup`. The component uses `ProductContext` to store product information and `CategoryContext` to read category information from local storage.
 
 
