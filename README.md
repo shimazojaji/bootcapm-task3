@@ -31,11 +31,16 @@ The JavaScript features and methods used in this mini app include:
 - toLocalString
 
 ## Technologies applied 
-### Built With
+
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+
 
 
 
@@ -59,5 +64,7 @@ The components of the project embedded in the main App component are as follows:
 The ProductHeader: This component is developed to display the title and the number of products available in the product list. Since this component requires access to product information stored in the local storage, it utilizes the `ProductContext`.
 
 The  AddNewCategory: The responsibility of this component is to add a category to the local storage. Each category includes a title and a description that the user must complete. Field validation is handled using `react-hook-form` and `yup`, and the `CategoryContext` is used to save the category in local storage.
+
+The  AddNewProduct: The responsibility of this component is to add products to the local storage. For this purpose, the user provides the product title and quantity through text fields and then selects a category for the product, which must have been previously saved in local storage by the `AddNewCategory` component. Form validation is handled using `react-hook-form` and `yup`. The component uses `ProductContext` to store product information and `CategoryContext` to read category information from local storage.
 
 
