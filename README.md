@@ -44,5 +44,9 @@ The JavaScript features and methods used in this mini app include:
 
   
 ## Details
+The project includes a main folder named src, which contains components, hooks, and all the core files of the project.
+The structure of the src folder is as follows:
+- The features folder includes subfolders category and product, where all items related to these features, such as components, context, and services, are organized within these subfolders.
+- The hooks folder is dedicated to all hooks that are shared between product and category.
 
 
