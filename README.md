@@ -46,7 +46,18 @@ The JavaScript features and methods used in this mini app include:
 ## Details
 The project includes a main folder named src, which contains components, hooks, and all the core files of the project.
 The structure of the src folder is as follows:
-- The features folder includes subfolders category and product, where all items related to these features, such as components, context, and services, are organized within these subfolders.
+- The features folder includes subfolders category and product, where all items related to these features, such as components, context, and data, are organized within these subfolders.
 - The hooks folder is dedicated to all hooks that are shared between product and category.
+- The ui folder contains  components for any UI, including: Button, Description, Label, SelectOption, and TextField.
+
+The components of the project embedded in the main App component are as follows:
+- ProductHeader
+- AddNewCategory
+- AddNewProduct
+- ProductFilter
+
+The ProductHeader: This component is developed to display the title and the number of products available in the product list. Since this component requires access to product information stored in the local storage, it utilizes the `ProductContext`.
+
+The  AddNewCategory: The responsibility of this component is to add a category to the local storage. Each category includes a title and a description that the user must complete. Field validation is handled using `react-hook-form` and `yup`, and the `CategoryContext` is used to save the category in local storage.
 
 
