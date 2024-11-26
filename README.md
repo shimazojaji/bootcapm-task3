@@ -67,4 +67,5 @@ The  _AddNewCategory_: The responsibility of this component is to add a category
 
 The  _AddNewProduct_: The responsibility of this component is to add products to the local storage. For this purpose, the user provides the product title and quantity through text fields and then selects a category for the product, which must have been previously saved in local storage by the `AddNewCategory` component. Form validation is handled using `react-hook-form` and `yup`. The component uses `ProductContext` to store product information and `CategoryContext` to read category information from local storage.
 
-
+The _ProductFilter_ component is designed to enable searching within the product list, sorting products based on the date they were added, and filtering products by a specific category.
+The ـProductListـ  component displays the products passed as props from its parent. For each product, it shows the title, creation date, quantity, and category. Additionally, a Delete button is provided to remove the product from local storage.
